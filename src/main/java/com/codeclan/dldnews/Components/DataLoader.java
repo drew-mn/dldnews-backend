@@ -1,5 +1,8 @@
 package com.codeclan.dldnews.Components;
 
+import com.codeclan.dldnews.Models.Article;
+import com.codeclan.dldnews.Models.Author;
+import com.codeclan.dldnews.Models.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -32,81 +35,6 @@ public class DataLoader implements ApplicationRunner {
             e.printStackTrace();
         }
 
-        Article politics1 = new Article(author_id, "Politics Article 1", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(politics1);
-
-        Article politics2 = new Article(author_id, "Politics Article 2", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(politics2);
-
-        Article politics3 = new Article(author_id, "Politics Article 3", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(politics3);
-
-        Article politics4 = new Article(author_id, "Politics Article 4", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(politics4);
-
-        Article politics5 = new Article(author_id, "Politics Article 5", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(politics5);
-
-        Article science1 = new Article(author_id, "Science Article 1", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(science1);
-
-        Article science2 = new Article(author_id, "Science Article 2", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(science2);
-
-        Article science3 = new Article(author_id, "Science Article 3", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(science3);
-
-        Article science4 = new Article(author_id, "Science Article 4", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(science4);
-
-        Article science5 = new Article(author_id, "Science Article 5", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(science5);
-
-        Article technology1 = new Article(author_id, "Technology Article 1", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(technology1);
-
-        Article technology2 = new Article(author_id, "Technology Article 2", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(technology2);
-
-        Article technology3 = new Article(author_id, "Technology Article 3", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(technology3);
-
-        Article technology4 = new Article(author_id, "Technology Article 4", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(technology4);
-
-        Article technology5 = new Article(author_id, "Technology Article 5", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(technology5);
-
-        Article business1 = new Article(author_id, "Business Article 1", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(business1);
-
-        Article business2 = new Article(author_id, "Business Article 2", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(business2);
-
-        Article business3 = new Article(author_id, "Business Article 3", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(business3);
-
-        Article business4 = new Article(author_id, "Business Article 4", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(business4);
-
-        Article business5 = new Article(author_id, "Business Article 5", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(business5);
-
-        Article humanInterest1 = new Article(author_id, "Business Article 1", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(humanInterest1);
-
-        Article humanInterest2 = new Article(author_id, "Business Article 2", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(humanInterest2);
-
-        Article humanInterest3 = new Article(author_id, "Business Article 3", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(humanInterest3);
-
-        Article humanInterest4 = new Article(author_id, "Business Article 4", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(humanInterest4);
-
-        Article humanInterest5 = new Article(author_id, "Business Article 5", date, category_id, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url", readCounter );
-        articleRepository.save(humanInterest5);
-
         Author author1 = new Author("Elaina Plott");
         authorRepository.save(author1);
 
@@ -137,20 +65,95 @@ public class DataLoader implements ApplicationRunner {
         Author author10 = new Author("Annie Lowrey");
         authorRepository.save(author10);
 
-        Category category1 = new Author("Politics");
+        Category category1 = new Category("Politics");
         authorRepository.save(category1);
 
-        Category category2 = new Author("Science");
+        Category category2 = new Category("Science");
         authorRepository.save(category2);
 
-        Category category3 = new Author("Technology");
+        Category category3 = new Category("Technology");
         authorRepository.save(category3);
 
-        Category category4 = new Author("Business");
+        Category category4 = new Category("Business");
         authorRepository.save(category4);
 
-        Category category5 = new Author("Human Interest");
+        Category category5 = new Category("Human Interest");
         authorRepository.save(category5);
+
+        Article politics1 = new Article(author1, "Politics Article 1", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(politics1);
+
+        Article politics2 = new Article(author1, "Politics Article 2", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(politics2);
+
+        Article politics3 = new Article(author1, "Politics Article 3", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(politics3);
+
+        Article politics4 = new Article(author2, "Politics Article 4", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(politics4);
+
+        Article politics5 = new Article(author2, "Politics Article 5", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(politics5);
+
+        Article science1 = new Article(author3, "Science Article 1", date, category2, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(science1);
+
+        Article science2 = new Article(author3, "Science Article 2", date, category2, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(science2);
+
+        Article science3 = new Article(author4, "Science Article 3", date, category2, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(science3);
+
+        Article science4 = new Article(author4, "Science Article 4", date, category2, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(science4);
+
+        Article science5 = new Article(author5, "Science Article 5", date, category2, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(science5);
+
+        Article technology1 = new Article(author6, "Technology Article 1", date, category3, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(technology1);
+
+        Article technology2 = new Article(author6, "Technology Article 2", date, category3, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(technology2);
+
+        Article technology3 = new Article(author6, "Technology Article 3", date, category3, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(technology3);
+
+        Article technology4 = new Article(author7, "Technology Article 4", date, category3, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(technology4);
+
+        Article technology5 = new Article(author7, "Technology Article 5", date, category3, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(technology5);
+
+        Article business1 = new Article(author8, "Business Article 1", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(business1);
+
+        Article business2 = new Article(author8, "Business Article 2", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(business2);
+
+        Article business3 = new Article(author8, "Business Article 3", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(business3);
+
+        Article business4 = new Article(author8, "Business Article 4", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(business4);
+
+        Article business5 = new Article(author6, "Business Article 5", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(business5);
+
+        Article humanInterest1 = new Article(author9, "Business Article 1", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(humanInterest1);
+
+        Article humanInterest2 = new Article(author9, "Business Article 2", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(humanInterest2);
+
+        Article humanInterest3 = new Article(author9, "Business Article 3", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(humanInterest3);
+
+        Article humanInterest4 = new Article(author10, "Business Article 4", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(humanInterest4);
+
+        Article humanInterest5 = new Article(author10, "Business Article 5", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        articleRepository.save(humanInterest5);
 
     }
 }

@@ -8,27 +8,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "categories")
-public class Category {
+@Table(name = "authors")
+public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
-    private String label;
+    private String name;
 
     @JsonIgnore
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)
     private List<Article> articles;
 
-    public Category(String label) {
-        this.label = label;
+    public Author(String name) {
+        this.name = name;
         this.articles = new ArrayList<Article>();
     }
 
-    public Category() {
+    public Author() {
     }
 
     public Long getId() {
@@ -39,12 +39,12 @@ public class Category {
         this.id = id;
     }
 
-    public String getLabel() {
-        return label;
+    public String getName() {
+        return name;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Article> getArticles() {
