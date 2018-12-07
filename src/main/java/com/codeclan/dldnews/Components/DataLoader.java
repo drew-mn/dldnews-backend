@@ -3,9 +3,13 @@ package com.codeclan.dldnews.Components;
 import com.codeclan.dldnews.Models.Article;
 import com.codeclan.dldnews.Models.Author;
 import com.codeclan.dldnews.Models.Category;
+import com.codeclan.dldnews.Repositories.articles.ArticleRepository;
+import com.codeclan.dldnews.Repositories.authors.AuthorRepository;
+import com.codeclan.dldnews.Repositories.categories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.stereotype.Component;
 
 import java.text.DateFormat;
@@ -18,7 +22,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     ArticleRepository articleRepository;
+    @Autowired
     AuthorRepository authorRepository;
+    @Autowired
     CategoryRepository categoryRepository;
 
     public DataLoader() {
@@ -66,19 +72,19 @@ public class DataLoader implements ApplicationRunner {
         authorRepository.save(author10);
 
         Category category1 = new Category("Politics");
-        authorRepository.save(category1);
+        categoryRepository.save(category1);
 
         Category category2 = new Category("Science");
-        authorRepository.save(category2);
+        categoryRepository.save(category2);
 
         Category category3 = new Category("Technology");
-        authorRepository.save(category3);
+        categoryRepository.save(category3);
 
         Category category4 = new Category("Business");
-        authorRepository.save(category4);
+        categoryRepository.save(category4);
 
         Category category5 = new Category("Human Interest");
-        authorRepository.save(category5);
+        categoryRepository.save(category5);
 
         Article politics1 = new Article(author1, "Politics Article 1", date, category1, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(politics1);
