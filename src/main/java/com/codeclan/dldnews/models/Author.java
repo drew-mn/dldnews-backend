@@ -1,4 +1,4 @@
-package com.codeclan.dldnews.Models;
+package com.codeclan.dldnews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cascade;

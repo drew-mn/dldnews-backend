@@ -1,15 +1,12 @@
-package com.codeclan.dldnews.Components;
-
-import com.codeclan.dldnews.Models.Article;
-import com.codeclan.dldnews.Models.Author;
-import com.codeclan.dldnews.Models.Category;
-import com.codeclan.dldnews.Repositories.articles.ArticleRepository;
-import com.codeclan.dldnews.Repositories.authors.AuthorRepository;
-import com.codeclan.dldnews.Repositories.categories.CategoryRepository;
+import com.codeclan.dldnews.models.Article;
+import com.codeclan.dldnews.models.Author;
+import com.codeclan.dldnews.models.Category;
+import com.codeclan.dldnews.repository.articles.ArticleRepository;
+import com.codeclan.dldnews.repository.authors.AuthorRepository;
+import com.codeclan.dldnews.repository.categories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.stereotype.Component;
 
 import java.text.DateFormat;
