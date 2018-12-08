@@ -6,9 +6,12 @@ import com.codeclan.dldnews.models.Category;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.util.Date;
+import java.util.List;
 
 @Projection(name = "embedForArticle", types = Article.class)
 public interface EmbedForArticle {
+
+    Long getId();
     Author getAuthor();
     String getTitle();
     Date getDate();
@@ -18,4 +21,6 @@ public interface EmbedForArticle {
     String getMedia();
     int getReadCounter();
     boolean getBookmarked();
+
+
 }
