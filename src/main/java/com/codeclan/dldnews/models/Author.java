@@ -18,9 +18,9 @@ public class Author {
     @Column
     private String name;
 
-    @JsonIgnore
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)
+//    @JsonIgnore
+//    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     private List<Article> articles;
 
     public Author(String name) {

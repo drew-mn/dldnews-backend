@@ -1,3 +1,5 @@
+package com.codeclan.dldnews.components;
+
 import com.codeclan.dldnews.models.Article;
 import com.codeclan.dldnews.models.Author;
 import com.codeclan.dldnews.models.Category;

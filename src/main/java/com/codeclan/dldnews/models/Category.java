@@ -20,7 +20,7 @@ public class Category {
 
     @JsonIgnore
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "article", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<Article> articles;
 
     public Category(String label) {
