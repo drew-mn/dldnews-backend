@@ -145,19 +145,19 @@ public class DataLoader implements ApplicationRunner {
         Article business5 = new Article(author6, "Business Article 5", date, category4, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(business5);
 
-        Article humanInterest1 = new Article(author9, "Business Article 1", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        Article humanInterest1 = new Article(author9, "Human Interest Article 1", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(humanInterest1);
 
-        Article humanInterest2 = new Article(author9, "Business Article 2", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        Article humanInterest2 = new Article(author9, "Human Interest Article 2", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(humanInterest2);
 
-        Article humanInterest3 = new Article(author9, "Business Article 3", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        Article humanInterest3 = new Article(author9, "Human Interest Article 3", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(humanInterest3);
 
-        Article humanInterest4 = new Article(author10, "Business Article 4", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        Article humanInterest4 = new Article(author10, "Human Interest Article 4", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(humanInterest4);
 
-        Article humanInterest5 = new Article(author10, "Business Article 5", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
+        Article humanInterest5 = new Article(author10, "Human Interest Article 5", date, category5, "This is a summary of the article you are about to read.", "This is the main text of the article", "media url");
         articleRepository.save(humanInterest5);
 
     }
