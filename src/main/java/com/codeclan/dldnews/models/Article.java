@@ -32,7 +32,7 @@ public class Article {
     @Column
     private String summary;
 
-    @Column
+    @Column(length = 70000)
     private String fullText;
 
     @Column
