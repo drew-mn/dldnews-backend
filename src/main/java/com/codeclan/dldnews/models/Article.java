@@ -1,6 +1,7 @@
 package com.codeclan.dldnews.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,7 +14,7 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("articles")
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
@@ -24,7 +25,7 @@ public class Article {
     @Column
     private Date date;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("articles")
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
